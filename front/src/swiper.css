@@ -1,0 +1,14 @@
+.swiper-pagination-bullet {
+    padding: 5px;
+    background-color: #fff;
+    opacity: 50%;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+    opacity: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    font-weight: bolder;
+    color: var(--accent-color);
+}
