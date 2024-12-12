@@ -7,10 +7,10 @@
   <title>neonshop</title>
 </head>
 
-<body class="w-full h-screen flex flex-col justify-end inter">
+<body class="w-screen h-full flex flex-col justify-center items-center inter">
 
-  <header class="w-full bg-neutral-900 h-72 flex justify-center items-center text-white gap-4">
-    <div class="w-[1024px] h-full flex justify-center items-center">
+  <header class="w-full bg-neutral-900 h-[30vh] flex justify-center items-center text-white gap-4">
+    <div class="w-[1024px] flex justify-center items-center">
       <p class="w-28 text-center">Novidades</p>
       <p class="w-28 text-center">Promoções</p>
       <h1 class="rainbow home-anchor y2k w-min text-5xl pt-11 pr-5 pb-8 select-none cursor-pointer">
@@ -21,17 +21,17 @@
     </div>
   </header>
 
-  <section class="w-full">
-    <div id="banner" class="swiper w-screen h-96">
+  <section class="w-screen">
+    <div id="banner" class="swiper w-screen h-[60vh]">
       <div class="swiper-wrapper text-white">
         <div class="bg-black swiper-slide flex justify-center items-center">
-          slide 1
+          <img src="src/assets/a.jpg" alt="">
         </div>
         <div class="bg-black swiper-slide flex justify-center items-center">
-          slide 2
+          <img src="src/assets/a.jpg" alt="">
         </div>
         <div class="bg-black swiper-slide flex justify-center items-center">
-          slide 3
+          <img src="src/assets/a.jpg" alt="">
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -57,7 +57,28 @@
         <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
         <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
       </div>
-      <div class="swiper-pagination border-2"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  
+  <section class="pb-4 w-full flex flex-col justify-center items-center gap-4">
+    <div class="w-[1024px]">
+      <h1 class="text-2xl">Novidades</h1>
+    </div>
+    <div id="news" class="swiper w-full px-4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 1</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 2</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 3</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 4</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 5</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 6</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 7</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 8</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
+        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 

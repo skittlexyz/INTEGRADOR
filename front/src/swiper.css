@@ -12,3 +12,6 @@
     font-weight: bolder;
     color: var(--accent-color);
 }
+.swiper-slide {
+    width: fit-content;
+}

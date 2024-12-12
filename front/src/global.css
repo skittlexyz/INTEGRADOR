@@ -15,3 +15,6 @@
 .y2k { font-family: Kabisat; }
 
 .inter { font-family: "Inter"; }
+
+*::-webkit-scrollbar { display: none !important; }
+* { -ms-overflow-style: none; scrollbar-width: none; }
