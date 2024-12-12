@@ -7,6 +7,7 @@ import './swiper.css'
 const banner = new Swiper('.swiper#banner', {
    loop: true,
    speed: 750,
+   slidesPerView: 1,
    navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
