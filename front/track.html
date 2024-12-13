@@ -9,7 +9,7 @@
 
 <body class="w-screen h-full flex flex-col justify-center items-center inter">
 
-  <header class="w-full bg-neutral-900 lg:h-[25vh] h-[30vh] flex flex-col justify-center items-center text-white gap-4">
+  <header class="w-full bg-neutral-900 lg:h-[25vh] lg:py-0 h-full py-4 flex flex-col justify-center items-center text-white gap-4">
     <div class="lg:px-0 lg:w-[1000px] px-4 w-full flex lg:flex-row flex-col justify-center items-center lg:gap-[none] gap-4">
       <div class="flex">
         <p class="text-center w-28">
@@ -33,86 +33,14 @@
     </div>
   </header>
 
-  <section class="w-screen">
-    <div id="banner" class="swiper lg:w-screen w-full h-[70vh]">
-      <div class="swiper-wrapper text-white">
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
+  <section class="py-4 lg:px-0 lg:w-[1000px] px-4 w-full flex flex-col justify-center items-center gap-4">
+    <h1 class="w-full text-2xl">🌎 Rastreie seu pedido</h1>
+    <div class="flex flex-col gap-4 w-full h-auto justify-between">
+      <div class="flex w-full h-[100%] gap-4 sm:flex-row flex-col">
+        <input type="number" class="w-full p-2 border-black border-2 bg-white text-black placeholder:text-neutral-500" placeholder="Código de rastreamento">
+        <button class="text-black bg-lime-400 w-full lg:w-[50%] p-2">CHECAR SITUAÇÃO</button>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
-  
-  <section class="py-4 w-full flex flex-col justify-center items-center gap-4">
-    <div class="lg:w-[1000px] lg:px-0 w-full px-4">
-      <h1 class="text-2xl">🦎 Promoções</h1>
-    </div>
-    <div id="promotions" class="swiper lg:w-[1000px] lg:px-0 w-full px-4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 1</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 2</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 3</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 4</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 5</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 6</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 7</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 8</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 11</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 12</div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  
-  <section class="pb-4 w-full flex flex-col justify-center items-center gap-4">
-    <div class="lg:w-[1000px] lg:px-0 w-full px-4">
-      <h1 class="text-2xl">🔰 Novidades</h1>
-    </div>
-    <div id="news" class="swiper lg:w-[1000px] lg:px-0 w-full px-4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 1</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 2</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 3</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 4</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 5</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 6</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 7</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 8</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 11</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 12</div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="pb-4 lg:px-0 lg:w-[1000px] px-4 w-full flex flex-col justify-center items-center gap-4">
-    <h1 class="w-full text-2xl">🔥 Mais populares!</h1>
-    <div class="flex flex-wrap gap-4 w-full h-auto justify-between items-center">
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 1</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 2</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 3</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 4</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 5</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 6</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 7</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 8</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 9</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 10</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 11</div>
-      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 12</div>
+      <iframe class="w-full" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=%20Campinas+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/pt'>Map Generator</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c19757c808a7bee05f87f522784fc244751408cd'></script>
     </div>
   </section>
 
