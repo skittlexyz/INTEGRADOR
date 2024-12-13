@@ -29,15 +29,33 @@ const promotions = new Swiper('.swiper#promotions', {
    spaceBetween: 20,
    slidesPerGroup: 2,
    speed: 1500,
-   pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-   },
+   // pagination: {
+   //    el: '.swiper-pagination',
+   //    clickable: true
+   // },
    autoplay: {
       delay: 5000,
       disableOnInteraction: false,
       
-   }
+   },
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+      600: {
+         slidesPerView: 2,
+         slidesPerGroup: 2
+      },
+      900: {
+        slidesPerView: 3,
+        slidesPerGroup: 3
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4
+      },
+    }
 });
 
 const news = new Swiper('.swiper#news', {
@@ -47,12 +65,27 @@ const news = new Swiper('.swiper#news', {
    spaceBetween: 20,
    slidesPerGroup: 5,
    speed: 1500,
-   pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-   },
+   // pagination: {
+   //    el: '.swiper-pagination',
+   //    clickable: true
+   // },
    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true
-   }
+      delay: 7500,
+      disableOnInteraction: false,
+      reverseDirection: true,
+   },
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      600: {
+         slidesPerView: 2,
+         slidesPerGroup: 2,
+      },
+      900: {
+         slidesPerView: 3,
+         slidesPerGroup: 3,
+      }
+    }
 });

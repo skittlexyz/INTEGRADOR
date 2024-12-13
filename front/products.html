@@ -12,14 +12,14 @@
   <header class="w-full bg-neutral-900 lg:h-[25vh] h-[30vh] flex flex-col justify-center items-center text-white gap-4">
     <div class="lg:px-0 lg:w-[1000px] px-4 w-full flex lg:flex-row flex-col justify-center items-center lg:gap-[none] gap-4">
       <div class="flex">
-        <p class="text-center w-28">
-          <a class="hover:underline cursor-pointer" onclick="window.location.href = '/products'">Produtos</a>
+        <p class="text-center w-28 font-bold">
+          <a class="cursor-pointer" onclick="window.location.href = '/products'">Produtos</a>
         </p>
         <p class="text-center w-28">
           <a class="hover:underline cursor-pointer" onclick="window.location.href = '/track'">Rastrear</a>
         </p>
       </div>
-      <h1 class="lg:order-[initial] -order-2 mx-2 rainbow home-anchor y2k w-min sm:text-5xl text-4xl pt-11 pr-5 pb-8 select-none cursor-pointer">
+      <h1 class="lg:order-[initial] -order-2 mx-2 rainbow breathing home-anchor y2k w-min sm:text-5xl text-4xl pt-11 pr-5 pb-8 select-none cursor-pointer">
         neonshop
       </h1>
       <div class="flex">
@@ -33,73 +33,11 @@
     </div>
   </header>
 
-  <section class="w-screen">
-    <div id="banner" class="swiper lg:w-screen w-full h-[70vh]">
-      <div class="swiper-wrapper text-white">
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
-        <div class="!w-screen h-auto bg-black swiper-slide flex justify-center items-center">
-          <img src="src/assets/a.jpg" alt="" class="w-screen">
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+  <section class="py-4 lg:px-0 lg:w-[1000px] px-4 w-full flex flex-col justify-center items-center gap-4">
+    <div class="w-full flex justify-between items-center">
+      <h1 class="text-2xl text-nowrap">🥏 Produtos</h1>
+      <input type="email" class="p-2 border-black border-2 bg-white text-black placeholder:text-neutral-500 lg:w-[23.6%] md:w-[31.8%] w-[50%]" placeholder="Busque...">
     </div>
-  </section>
-  
-  <section class="py-4 w-full flex flex-col justify-center items-center gap-4">
-    <div class="lg:w-[1000px] lg:px-0 w-full px-4">
-      <h1 class="text-2xl">🦎 Promoções</h1>
-    </div>
-    <div id="promotions" class="swiper lg:w-[1000px] lg:px-0 w-full px-4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 1</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 2</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 3</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 4</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 5</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 6</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 7</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 8</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 11</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 12</div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  
-  <section class="pb-4 w-full flex flex-col justify-center items-center gap-4">
-    <div class="lg:w-[1000px] lg:px-0 w-full px-4">
-      <h1 class="text-2xl">🔰 Novidades</h1>
-    </div>
-    <div id="news" class="swiper lg:w-[1000px] lg:px-0 w-full px-4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 1</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 2</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 3</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 4</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 5</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 6</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 7</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 8</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 9</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 10</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 11</div>
-        <div class="swiper-slide bg-black text-white !h-64 w-auto">Slide 12</div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="pb-4 lg:px-0 lg:w-[1000px] px-4 w-full flex flex-col justify-center items-center gap-4">
-    <h1 class="w-full text-2xl">🔥 Mais populares!</h1>
     <div class="flex flex-wrap gap-4 w-full h-auto justify-between items-center">
       <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 1</div>
       <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 2</div>
@@ -113,6 +51,18 @@
       <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 10</div>
       <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 11</div>
       <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 12</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 13</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 14</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 15</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 16</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 17</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 18</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 19</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 20</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 21</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 22</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 23</div>
+      <div class="bg-black text-white h-64 lg:w-[23.6%] md:w-[31.8%] w-full">Slide 24</div>
     </div>
   </section>
 

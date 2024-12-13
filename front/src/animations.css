@@ -3,37 +3,20 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 4s ease-in-out infinite;
+    animation: rainbow_animation 6s ease-in-out infinite;
     background-size: 400% 100%;
 }
 
 @keyframes rainbow_animation {
-    0%,100% { background-position: 0 0; }
-    50% { background-position: 100% 0; }
-}
-
-.breathing {
-    animation: breathing_animation 4s ease-in-out infinite;
-}
-
-@keyframes breathing_animation {
-    0%,100% {
+    0%,100% { 
+        background-position: 0 0; 
         transform: translateY(5px);
     }
-    50% {
+    25%,75% {
         transform: translateY(-5px);
     }
-}
-
-.swinging {
-    animation: swinging_animation 3s ease-in-out infinite;
-}
-
-@keyframes swinging_animation {
-    0%,100% {
-        transform: rotate(2deg);
-    }
-    50% {
-        transform: rotate(-2deg);
+    50% { 
+        background-position: 100% 0; 
+        transform: translateY(5px);
     }
 }
