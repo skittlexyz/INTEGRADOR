@@ -15,3 +15,8 @@
 .swiper-slide {
     width: fit-content;
 }
+
+.swiper-button-prev.fade,
+.swiper-button-next.fade {
+    opacity: 50%;
+}

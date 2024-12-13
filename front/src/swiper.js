@@ -29,6 +29,7 @@ const promotions = new Swiper('.swiper#promotions', {
    spaceBetween: 20,
    slidesPerGroup: 2,
    speed: 1500,
+   mousewheel: true,
    // pagination: {
    //    el: '.swiper-pagination',
    //    clickable: true
@@ -65,6 +66,7 @@ const news = new Swiper('.swiper#news', {
    spaceBetween: 20,
    slidesPerGroup: 5,
    speed: 1500,
+   mousewheel: true,
    // pagination: {
    //    el: '.swiper-pagination',
    //    clickable: true
@@ -89,3 +91,11 @@ const news = new Swiper('.swiper#news', {
       }
     }
 });
+
+const product = new Swiper('.swiper#product', {
+   loop: true,
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+ });

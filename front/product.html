@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>neonshop</title>
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>neonshop</title>
+    <script src="./src/cart.js"></script>
 </head>
 
-<body class="w-screen h-[105vh] flex flex-col justify-center items-center inter">
+<body class="w-screen lg:h-[105vh] h-full flex flex-col justify-center items-center inter">
 
-  <header
-    class="relative w-full bg-neutral-900 lg:h-[25vh] lg:py-0 h-fit py-4 flex flex-col justify-center items-center text-white gap-4">
-    <div
-      class="lg:px-0 lg:w-[1000px] px-4 w-full flex lg:flex-row flex-col justify-center items-center lg:gap-[none] gap-4">
+  <header class="relative w-full bg-neutral-900 lg:h-[25vh] lg:py-0 h-fit py-4 flex flex-col justify-center items-center text-white gap-4">
+    <div class="lg:px-0 lg:w-[1000px] px-4 w-full flex lg:flex-row flex-col justify-center items-center lg:gap-[none] gap-4">
       <div class="flex">
         <p class="text-center w-28">
           <a class="hover:underline cursor-pointer" onclick="window.location.href = '/products'">Produtos</a>
@@ -29,8 +28,8 @@
         <p class="text-center w-28">
           <a class="hover:underline cursor-pointer" onclick="window.location.href = '/profile'">Perfil</a>
         </p>
-        <p class="text-center w-28 font-bold">
-          <a class="cursor-pointer" onclick="window.location.href = '/cart'">Carrinho</a>
+        <p class="text-center w-28">
+          <a class="hover:underline cursor-pointer" onclick="window.location.href = '/cart'">Carrinho</a>
         </p>
       </div>
     </div>
@@ -45,50 +44,54 @@
   </header>
 
   <section class="py-4 lg:px-0 lg:w-[1000px] px-4 w-full h-full flex flex-col justify-center items-center gap-4">
-    <h1 class="w-full text-2xl">🛒 Carrinho</h1>
+    <h1 class="w-full text-2xl">👕 Produto</h1>
     <!-- <div class="flex justify-center items-center h-full">
       <h1 class="w-full text-2xl text-center font-bold">Seu carrinho está vázio!<br><span onclick="window.location.href = './products'" class="cursor-pointer text-xl font-normal text-[#ff3399] underline">Comece a fazer compras!</span></h1>
     </div> -->
     <div class="flex lg:flex-row flex-col lg:items-stretch items-end lg:gap-4 gap-12 w-full h-full ">
       <div class="flex flex-col gap-4 lg:w-[70%] w-full h-full">
-        <div class="w-full flex gap-4">
-          <div class="w-44 h-44 aspect-square bg-black text-white">
-            <img class="product-thumbnail single" src="" alt="">
+        <div class="w-full flex gap-4 md:flex-row flex-col">
+          <div class="md:w-96 w-full h-auto aspect-square bg-black text-white">
+            <div id="product" class="swiper h-full">
+              <div class="swiper-wrapper h-full">
+                <div class="swiper-slide h-auto"><img class="product-thumbnail single" src="" alt=""></div>
+                <div class="swiper-slide h-auto"><img class="product-thumbnail single" src="" alt=""></div>
+                <div class="swiper-slide h-auto"><img class="product-thumbnail single" src="" alt=""></div>
+              </div>
+              <div class="swiper-button-next fade"></div>
+              <div class="swiper-button-prev fade"></div>
+            </div>
           </div>
-          <div class="flex flex-col justify-between text-wrap">
-            <h2 class="text-2xl name">
+          <div class="flex flex-col gap-2 text-wrap">
+            <h2 class="text-2xl" id="name">
               Produto 1
             </h2>
-            <p class="description">
+            <p id="description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <div class="flex gap-2">
-              <button
-                onclick="if (Number(this.nextElementSibling.value) > 1) this.nextElementSibling.value = Number(this.nextElementSibling.value) - 1; this.parentElement.nextElementSibling.innerText = `R$ ${String((999 * Number(this.nextElementSibling.value)).toFixed(2)).replace('.',',')}`;"
-                class="decrease p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black sm:aspect-square h-full text-2xl w-12 flex justify-center items-center">-</button>
-              <input onchange="if (Number(this.value) < 1) this.value = 1;" type="number"
-                class="p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black placeholder:text-neutral-500 w-12 text-center quantity"
-                value="1">
-              <button onclick="this.previousElementSibling.value = Number(this.previousElementSibling.value) + 1; this.parentElement.nextElementSibling.innerText = `R$ ${String((999 * Number(this.previousElementSibling.value)).toFixed(2)).replace('.',',')}`;"
-                class="p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black sm:aspect-square h-full text-2xl w-12 flex justify-center items-center increase">+</button>
-            </div>
-            <span class="text-2xl font-bold text-[#ff3399] box-border price">
+            <span class="text-2xl font-bold text-[#ff3399] box-border" id="price">
               R$ 999,99
             </span>
           </div>
         </div>
       </div>
       <div class="flex flex-col justify-between lg:w-[30%] w-full h-fit gap-2">
-        <div class="flex flex-col gap-1 h-auto">
-          <p class="text-3xl font-bold text-[#ff3399] flex justify-between"><span
-              class="text-lg">SUBTOTAL</span><span>R$ 999,99</span></p>
-          <p class="text-lg font-bold text-[#ff3399] flex justify-between"><span class="text-lg">FRETE</span><span>R$
+        <div class="flex flex-col gap-1 h-auto w-72 self-end">
+          <div class="flex gap-2 w-full justify-end">
+            <button id="increase"
+              onclick="if (Number(this.nextElementSibling.value) > 1) this.nextElementSibling.value = Number(this.nextElementSibling.value) - 1; this.parentElement.nextElementSibling.children[1].innerText = `R$ ${String((999 * Number(this.nextElementSibling.value)).toFixed(2)).replace('.',',')}`;"
+              class="p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black sm:aspect-square h-full text-2xl w-12 flex justify-center items-center">-</button>
+            <input onchange="if (Number(this.value) < 1) this.value = 1;" type="number" id="quantity"
+              class="p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black placeholder:text-neutral-500 w-12 text-center"
+              value="1">
+            <button id="decrease"
+              onclick="this.previousElementSibling.value = Number(this.previousElementSibling.value) + 1; this.parentElement.nextElementSibling.children[1].innerText = `R$ ${String((999 * Number(this.previousElementSibling.value)).toFixed(2)).replace('.',',')}`;"
+              class="p-2 sm:py-2 py-0 border-neutral-300 border-2 bg-white text-black sm:aspect-square h-full text-2xl w-12 flex justify-center items-center">+</button>
+          </div>
+          <p class="text-3xl font-bold text-[#ff3399] flex justify-between w-full"><span>TOTAL</span><span id="total">R$
               999,99</span></p>
-          <hr>
-          <p class="text-3xl font-bold text-[#ff3399] flex justify-between"><span>TOTAL</span><span>R$ 999,99</span></p>
+          <button onclick="addToCart(new URLSearchParams(window.location.search).get('id'))" id="addButton" class="text-black bg-lime-400 w-full p-2 self-end">ADICIONAR AO CARRINHO</button>
         </div>
-        <button onclick="window.location.href = 'checkout.html'" class="text-black bg-lime-400 w-full p-2">IR PARA O
-          PAGAMENTO</button>
       </div>
     </div>
   </section>

@@ -7,16 +7,16 @@
   <title>neonshop</title>
 </head>
 
-<body class="w-screen h-full flex flex-col justify-center items-center inter">
+<body class="w-screen h-[105vh] flex flex-col justify-center items-center inter">
 
-  <header class="w-full bg-neutral-900 lg:h-[25vh] lg:py-0 h-fit  py-4 flex flex-col justify-center items-center text-white gap-4 relative">
+  <header class="w-full bg-neutral-900 lg:h-[25vh] lg:py-0 h-fit py-4 flex flex-col justify-center items-center text-white gap-4">
     <div class="lg:px-0 lg:w-[1000px] px-4 w-full flex lg:flex-row flex-col justify-center items-center lg:gap-[none] gap-4">
       <div class="flex">
         <p class="text-center w-28">
           <a class="hover:underline cursor-pointer" onclick="window.location.href = '/products'">Produtos</a>
         </p>
-        <p class="text-center w-28 font-bold">
-          <a class="cursor-pointer" onclick="window.location.href = '/track'">Rastrear</a>
+        <p class="text-center w-28">
+          <a class="hover:underline cursor-pointer" onclick="window.location.href = '/track'">Rastrear</a>
         </p>
       </div>
       <h1 class="lg:order-[initial] -order-2 mx-2 rainbow breathing home-anchor y2k w-min sm:text-5xl text-4xl pt-11 pr-5 pb-8 select-none cursor-pointer">
@@ -26,26 +26,43 @@
         <p class="text-center w-28">
           <a class="hover:underline cursor-pointer" onclick="window.location.href = '/profile'">Perfil</a>
         </p>
-        <p class="text-center w-28">
-          <a class="hover:underline cursor-pointer" onclick="window.location.href = '/cart'">Carrinho</a>
+        <p class="text-center w-28 font-bold">
+          <a class="cursor-pointer" onclick="window.location.href = '/cart'">Carrinho</a>
         </p>
       </div>
     </div>
-    <div onclick="window.location.href = '/adm'" class="absolute bottom-4 right-4">
-      <svg class="w-8 h-8 text-neutral-900 duration-150 cursor-pointer hover:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
-        <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-      </svg>
-    </div>
   </header>
 
-  <section class="py-4 lg:px-0 lg:w-[1000px] px-4 w-full flex flex-col justify-center items-center gap-4">
-    <h1 class="w-full text-2xl">🌎 Rastreie seu pedido</h1>
-    <div class="flex flex-col gap-4 w-full h-auto justify-between">
-      <div class="flex w-full h-[100%] gap-4 sm:flex-row flex-col">
-        <input type="number" class="w-full p-2 border-black border-2 bg-white text-black placeholder:text-neutral-500" placeholder="Código de rastreamento">
-        <button class="text-black bg-lime-400 w-full lg:w-[50%] p-2">CHECAR SITUAÇÃO</button>
+  <section class="py-4 lg:px-0 lg:w-[1000px] px-4 w-full h-full flex flex-col justify-center items-center gap-4">
+    <h1 class="w-full text-2xl">🔧 Painel de Administrador</h1>
+    <!-- <div class="flex justify-center items-center h-full">
+      <h1 class="w-full text-2xl text-center font-bold">Seu carrinho está vázio!<br><span onclick="window.location.href = './products'" class="cursor-pointer text-xl font-normal text-[#ff3399] underline">Comece a fazer compras!</span></h1>
+    </div> -->
+    <div class="flex lg:flex-row flex-col lg:items-stretch items-end lg:gap-4 gap-12 w-full h-full ">
+      <div class="flex flex-col gap-4 lg:w-[70%] w-full h-full">
+        <div class="w-full flex gap-4">
+          <div class="w-44 h-44 aspect-square bg-black text-white">
+            produto
+          </div>
+          <div class="flex flex-col justify-between text-wrap">
+            <h2 class="text-2xl">
+              Produto 1
+            </h2>
+            <p>Nome</p>
+            <p>Endereço</p>
+            <p>Quantidade</p>
+            <span class="text-2xl font-bold text-[#ff3399] box-border">
+              R$ 999,99
+            </span>
+          </div>
+        </div>
       </div>
-      <iframe class="w-full" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=%20Campinas+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/pt'>Map Generator</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c19757c808a7bee05f87f522784fc244751408cd'></script>
+      <div class="flex flex-col justify-between lg:w-[30%] w-full h-fit gap-2">
+        <div class="flex flex-col gap-1 h-auto">
+          <p class="text-3xl font-bold text-[#ff3399] flex justify-between"><span>TOTAL FATURADO</span><span>R$ 999,99</span></p>
+        </div>
+        <button class="text-black bg-lime-400 w-full p-2">EXPORTAR PEDIDOS</button>
+      </div>
     </div>
   </section>
 
